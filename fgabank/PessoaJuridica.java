@@ -1,22 +1,24 @@
+
 package fgabank;
 
 public class PessoaJuridica extends PessoaHeranca {
 
 	private String cnpj;
-	private String seguimento;
+	private String segmento;
 	private String responsavel;
-
+	
 	public PessoaJuridica() {
 		super();
 	}
 
-	public PessoaJuridica(String cnpj, String seguimento, String responsavel) {
+	public PessoaJuridica(String cnpj, String segmento, String responsavel) {
 		super();
 		this.cnpj = cnpj;
-		this.seguimento = seguimento;
+		this.segmento = segmento;
 		this.responsavel = responsavel;
 	}
 
+	
 	public String getCnpj() {
 		return cnpj;
 	}
@@ -25,12 +27,12 @@ public class PessoaJuridica extends PessoaHeranca {
 		this.cnpj = cnpj;
 	}
 
-	public String getSeguimento() {
-		return seguimento;
+	public String getSegmento() {
+		return segmento;
 	}
 
-	public void setSeguimento(String seguimento) {
-		this.seguimento = seguimento;
+	public void setSegmento(String segmento) {
+		this.segmento = segmento;
 	}
 
 	public String getResponsavel() {
@@ -40,5 +42,5 @@ public class PessoaJuridica extends PessoaHeranca {
 	public void setResponsavel(String responsavel) {
 		this.responsavel = responsavel;
 	}
-
+	
 }

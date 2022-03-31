@@ -1,54 +1,57 @@
 package fgabank;
 
 public class Conta {
-	// atributos
+	//atributos
 	private int agencia;
 	private int numeroConta;
-	private double saldo;
-	private String titular;
+	protected double saldo;
+	private PessoaHeranca titular;
 
-	// construtores
-	public Conta() { // padrao
 
+	//construtores
+	public Conta() { //padrao
+	
 	}
 
-	public Conta(int agencia, int numeroConta, String titular) {// sobrecarregado
+	public Conta(int agencia, int numeroConta, PessoaHeranca titular) { //sobrecarregado
 		super();
 		this.agencia = agencia;
 		this.numeroConta = numeroConta;
 		this.titular = titular;
 		this.saldo = 0;
 	}
-
-	// metodos
-
+	
+	//metodos
+	
 	public void depositar(double valor) {
 		if (valor > 0) {
-			saldo += valor; // saldo = saldo + valor;
+			saldo +=valor; // saldo = saldo + valor;
 		}
-
+			
 	}
-
+	
 	public boolean sacar(double valor) {
-		if (saldo > 0 && saldo >= valor) {
-			saldo -= valor;
-			return true;
-		}
-
+			if(valor > 0 && saldo >= valor) {
+				saldo -= valor;
+				return true;
+			}
+			
 		return false;
 	}
-
+	
 	public boolean transferir(double valor, Conta destinatario) {
-		if (valor > 0 && saldo >= valor) {
+		if(valor > 0 && saldo >=valor) {
 			saldo -= valor;
 			destinatario.depositar(valor);
 			return true;
 		}
-
+		
 		return false;
 	}
+	
+	
 
-	// encapsulamentos
+	//encapsulamentos
 	public int getAgencia() {
 		return agencia;
 	}
@@ -69,11 +72,11 @@ public class Conta {
 		return saldo;
 	}
 
-	public String getTitular() {
+	public PessoaHeranca getTitular() {
 		return titular;
 	}
 
-	public void setTitular(String titular) {
+	public void setTitular(PessoaHeranca titular) {
 		this.titular = titular;
 	}
 
