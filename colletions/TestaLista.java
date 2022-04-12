@@ -49,13 +49,13 @@ public class TestaLista {
 		System.out.println("  ");
 		Collections.sort(meusCarros);
 		System.out.println(meusCarros.toString());
-		
+
 		System.out.println("  ");
-		meusCarros.sort( new ComparadorDeAnos());
+		meusCarros.sort(new ComparadorDeAnos());
 		System.out.println(meusCarros.toString());
 
 		System.out.println("   ");
-		Collections.shuffle(meusCarros); //colocar emm ordem aleatória
+		Collections.shuffle(meusCarros); // colocar emm ordem aleatória
 		System.out.println(meusCarros.toString());
 	}
 
